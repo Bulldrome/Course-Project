@@ -1,0 +1,49 @@
+<div>
+  <div class="table-responsive">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>
+            No
+          </th>
+          <th>
+            Employee First Name
+          </th>
+          <th>
+            Employee First Name
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td>
+            {{cnt @index}}
+          </td>
+          <td>
+            {{this.firstName}}
+          </td>
+          <td>
+            {{this.lastName}}
+          </td>
+          <td>
+            <a href="/employees/edit/{{this.id}}">Edit</a>
+            <a href="/employees/delete/{{this.id}}">Delete</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <button class="btn btn-primary" onclick="addEmployee();">
+              Add
+            </button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header img {
+  width: 200px;
+}
+
+header h1 {
+  padding: .5em 0 .5em .5em;
+}
+
+.table-responsive {
+  margin: .5em;
+}
+
+h2 {
+  padding: .5em 0 .5em .5em;
+}
