@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Location Tracker</title>
+	<link href="LocationTracker.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+	<header>
+		Location Tracker
+	</header>
+
+	<div class="wrapper">
+		<div class="content">
+				<button class="start-button" id="Start-Button">Start</button>
+				<div class="data">
+					<p>Update #:&nbsp; <span id="Update-Number"></p> 
+					<p>Start Latitude: &nbsp;<span id="Start-Latitude"></span></p>
+					<p>Start Longitude: &nbsp;<span id="Start-Longitude"></span></p>
+					<p>Current Latitude: &nbsp;<span id="Current-Latitude"></span></p>
+					<p>Current Longitude: &nbsp;<span id="Current-Longitude"></span></p>
+				</div>
+				<div id="map">
+					
+				</div>
+			
+		</div>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI7ODVmjWz7TYJ-Gewcz5vGH509j5pwLs&callback=initMap"
+    async defer></script>
+    <script src="LocationTracker.js" type="text/javascript"></script>
+</body>
+</html>

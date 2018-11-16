@@ -1,0 +1,49 @@
+    <div>HW4 - Part1</div>
+    <br/>
+    <div class="col-md-2" style="color:gray;"><b>My Books</b></div>
+    <div class="col-md-8"><table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Qty</th>
+                <th>UnitPrice</th>
+                <th>$UnitPrice</th>
+                <th>Line Total</th>
+                <th><div>Total {{totalPrice | currency}}</div></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let book of books" >
+            <tr>
+                <td>
+                    <input [(ngModel)]="book.title" class="form-control">
+                </td>
+                <td>
+                    <input [(ngModel)]="book.qty" class="form-control" size="2">
+                </td>
+                <td>
+                    <input [(ngModel)]="book.unitprice" class="form-control" size="5">
+                </td>
+                <td>{{book.unitprice | currency}}</td>
+                <td class="lineTotal">{{book.unitprice * book.qty | currency}}
+                </td>
+                <td>
+                    <button type = "button" (click)="removeBook($event)" (click)="gettotalPrice($event)" class="btn btn-danger" >
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tr class="function-button-row">
+            <td colspan="3" class="function-button-row-item" style="">
+                <button type = "button" class="btn btn-primary" (click)="addBook($event)" (click)="gettotalPrice($event)">
+                    New
+                </button>
+            </td>
+            <td colspan="3" style="">
+                <!--Total Price of the cart will be compute after click the save buttom-->
+                <button type = "button" class="btn btn-primary" (click)="saveBook($event)" (click)="gettotalPrice($event)">
+                    Save
+                </button>
+            </td>
+        </tr>
+    </table></div>

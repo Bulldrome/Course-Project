@@ -1,0 +1,10 @@
+<div>HW4 - Part2</div>
+<br/>
+
+<div>Input: <input [(ngModel)]="inputText"></div>
+<div>Delimiter: <input [(ngModel)]="delimiter"></div>
+
+<br/>
+
+<div>{{inputText|tokenizer:default}}(Default)</div>
+<div>{{inputText|tokenizer:delimiter}}(With option)</div>
